@@ -12,12 +12,11 @@ Behave is used to run our tests, with selenium on Firefox.
 Tags
 ----
 The @skip tag may be used to skip scenarios or entire features if needed.
-Further tags like @portal, @cwe, @caas etc are planned to help separate scenarios and test specific components at a later date.
 
 Directory Structure
 ----
 - `features/` has feature files, in the Given, When, Then Gherkin syntax
-- Inside the `features/` directory, the `.feature` files are categorized into streams 
+- Inside the `features/` directory, the `.feature` files are categorized into streams and a `common` directory, which holds features that are common to all streams or do not belong to any stream
 - `steps/` has step definitions
 
 Requirements
@@ -45,19 +44,20 @@ Configuration Settings
 The default environment is 'development', but can be specified as `development` environment variable.
 
 For example: To use the Google URL from the development environment:
-1. Enter value for cwe uri in settings.yml, development: section
+1. Enter value for any uri in settings.yml, development: section
 
 
 
 'config/settings.yml' is loaded to context.data variable in order for it to be used globally across behave scripts. Please add your config structure to `config/settings.yml` first and the you can retrieve it from context.data.
 
-On the Jenkins node, `config/settings.yml` in the repo is replaced with configuration stored locally at /etc/spicegate/settings.yml. To run on jenkins with arbitrary configuration, comment out the `cp ...` system call in the `behave-jenkins` script, and the `config/settings.yml` from the repository will be used.
 
 Run Tests
 ----
 From the project root,
 
 `behave # for python`
+
+You can open the image created by screenshot at /tmp/ directory using 'gnome-open' command in a linux system
 
 Headless mode
 ----
@@ -68,8 +68,10 @@ For running on systems without a display (such as jenkins), we need to use headl
 
 # stylelabs
 
-restapi.py
+Restapi.py
 ---
-This file contains script for test automation assessment - 2.
-For running the restapi.py file, simply do a:
-# python restapi.py
+
+This file contains script for test automation assessment - 2. For running the restapi.py file, simply do a:
+# python3 restapi.py
+or
+# pytest restapi.py

@@ -1,0 +1,7 @@
+---
+development:
+  common:
+    google:
+      uri: www.google.com
+    expedia:
+      uri: www.expedia.com
