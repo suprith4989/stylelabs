@@ -17,7 +17,7 @@ Further tags like @portal, @cwe, @caas etc are planned to help separate scenario
 Directory Structure
 ----
 - `features/` has feature files, in the Given, When, Then Gherkin syntax
-- Inside the `features/` directory, the `.feature` files are categorized into streams and a `common` directory, which holds features that are common to all streams or do not belong to any stream
+- Inside the `features/` directory, the `.feature` files are categorized into streams 
 - `steps/` has step definitions
 
 Requirements
@@ -65,4 +65,11 @@ For running on systems without a display (such as jenkins), we need to use headl
 
 - Install Xvfb. `xorg-X11-server-Xvfb` on fedora/RHEL
 - For python, install xvfbwrapper: `pip install xvfbwrapper`
+
 # stylelabs
+
+restapi.py
+---
+This file contains script for test automation assessment - 2.
+For running the restapi.py file, simply do a:
+# python restapi.py
