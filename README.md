@@ -42,7 +42,7 @@ Alternatively, you can run "pip install -r requirements.text" from the root of t
 Configuration Settings
 ----
 `config/settings.yml` provides configuration options for all environments.
-The default environment is 'development', but can be specified as `SPICEGATE_ENV` environment variable.
+The default environment is 'development', but can be specified as `development` environment variable.
 
 For example: To use the Google URL from the development environment:
 1. Enter value for cwe uri in settings.yml, development: section
